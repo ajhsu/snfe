@@ -1,0 +1,24 @@
+{
+  "name": "strip-named-function",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.es6.js",
+  "bin": {
+    "snfe": "./cli.js"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/babel index.es6.js -o index.js && ./node_modules/.bin/babel cli.es6.js -o cli.js ",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "author": "AJ Hsu",
+  "license": "WTFPL",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2"
+  }
+}
