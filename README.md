@@ -1,4 +1,4 @@
-# Strip Named Function Expression
+# Strip Named Function Expression [![Build Status](https://travis-ci.org/ajhsu/snfe.svg?branch=master)](https://travis-ci.org/ajhsu/snfe)
 Strip named function expression's name, preventing from raising error on Safari's strict mode.
 
 ## Usage
