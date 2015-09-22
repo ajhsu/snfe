@@ -4,15 +4,15 @@
   "description": "strip-named-function-expression",
   "main": "index.es6.js",
   "bin": {
-    "snfe": "./cli.js"
+    "snfe": "./build/cli.js"
   },
   "scripts": {
-    "build": "./node_modules/.bin/babel index.es6.js -o index.js && ./node_modules/.bin/babel cli.es6.js -o cli.js ",
+    "build": "./node_modules/.bin/babel src/index.es6.js -o build/index.js && ./node_modules/.bin/babel src/cli.es6.js -o build/cli.js ",
     "test": "npm run build && ./node_modules/.bin/mocha --compilers js:babel/register"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "build/index.js",
+    "build/cli.js"
   ],
   "author": "AJ Hsu",
   "license": "WTFPL",
