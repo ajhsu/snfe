@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 import fs from 'fs';
-import strip from'./index';
 import { version } from './package.json';
+import snfe from './index';
 
 let input = process.argv[2];
 
