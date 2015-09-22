@@ -1,7 +1,7 @@
 {
-  "name": "strip-named-function",
+  "name": "snfe",
   "version": "0.0.1",
-  "description": "",
+  "description": "strip-named-function-expression",
   "main": "index.es6.js",
   "bin": {
     "snfe": "./cli.js"
