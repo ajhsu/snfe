@@ -49,6 +49,4 @@ describe('Basics', function() {
 
 describe('Basics', function(){
 
-    it('Basic function');
-
 });
