@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var snfe = require('../build/index');
+var snfe = require('../build/index').snfe;
 
 describe('Basics', function() {
 
