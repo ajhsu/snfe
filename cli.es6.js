@@ -21,7 +21,14 @@ if (process.argv.indexOf(`-h`) !== -1 ||
     process.exit(0);
 }
 
+
+let input = process.argv[2];
+
 if (input) {
-    process.stdout.write(strip(fs.readFileSync(input, `utf8`)).toString());
+    let inputString = fs.readFileSync(input, `utf8`);
+    let result = snfe(inputString);
+    process.stdout.write(result);
     process.exit(0);
 }
+
+process.exit(0);
