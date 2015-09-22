@@ -2,9 +2,9 @@
   "name": "snfe",
   "version": "0.0.1",
   "description": "strip-named-function-expression",
-  "main": "index.es6.js",
+  "main": "build/index.js",
   "bin": {
-    "snfe": "./build/cli.js"
+    "snfe": "build/cli.js"
   },
   "scripts": {
     "build": "./node_modules/.bin/babel src/index.es6.js -o build/index.js && ./node_modules/.bin/babel src/cli.es6.js -o build/cli.js ",
