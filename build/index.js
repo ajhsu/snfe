@@ -3,9 +3,13 @@
 Object.defineProperty(exports, '__esModule', {
     value: true
 });
-exports['default'] = stripNamedFunctionExpression;
+exports.snfe = snfe;
+var SEARCH_PATTERN = /([\=|\[|\,|\(|\:|\!][\s]*)function\s+([\w]+)(\([\w|\,|\s]*?\2[\w|\,|\s]*?\))/g;
+exports.SEARCH_PATTERN = SEARCH_PATTERN;
+var REPLACEMENT = '$1function$3';
+exports.REPLACEMENT = REPLACEMENT;
 
-function stripNamedFunctionExpression(input) {
+function snfe(input) {
 
     if ('undefined' == typeof input) {
         throw 'input must be a string';
@@ -15,8 +19,7 @@ function stripNamedFunctionExpression(input) {
         return '';
     }
 
-    return input.replace(/([\=|\[|\,|\(|\:|\!][\s]*)function\s+([\w]+)(\([\w|\,|\s]*?\2[\w|\,|\s]*?\))/g, '$1function$3');
+    return input.replace(SEARCH_PATTERN, REPLACEMENT);
 }
 
 ;
-module.exports = exports['default'];
