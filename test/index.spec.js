@@ -33,6 +33,33 @@ describe('Basics', function() {
         }
     });
 
+    it('should not strip function name because JS is case-sensitive', function() {
+        var testCases = [{
+            raw: 'var test1 = function B(a,b,c){};',
+            expected: 'var test1 = function B(a,b,c){};'
+        }, {
+            raw: 'var test1 = function Anonymous(a,anonymous,c){};',
+            expected: 'var test1 = function Anonymous(a,anonymous,c){};'
+        }, {
+            raw: 'var test2 = [function C(a,b,c){}];',
+            expected: 'var test2 = [function C(a,b,c){}];'
+        }, {
+            raw: 'var test3 = (function D(c,d,e){return "hello";})();',
+            expected: 'var test3 = (function D(c,d,e){return "hello";})();'
+        }, {
+            raw: 'var test4 = { test: function E(d,e,f){} };',
+            expected: 'var test4 = { test: function E(d,e,f){} };'
+        }, {
+            raw: 'var test4 = { test: !function E(d,e,f){} };',
+            expected: 'var test4 = { test: !function E(d,e,f){} };'
+        }];
+        for (var c = 0; c < testCases.length; c++) {
+            var raw = testCases[c].raw;
+            var expected = testCases[c].expected;
+            var result = snfe(raw);
+            expect(result).to.be.equal(expected);
+        }
+    });
     it('should throw expecetion when input is empty', function(){
         expect(function() {
             snfe('');
