@@ -3,7 +3,7 @@ var snfe = require('../build/index').snfe;
 
 describe('Basics', function() {
 
-    it('should strip function name', function() {
+    it('should strip function name as expected', function() {
 
         var testCases = [{
             raw: 'var test1 = function b(a,b,c){};',
