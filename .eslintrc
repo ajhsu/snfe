@@ -1,6 +1,0 @@
-{
-  "extends": "snfe",
-  "rules": {
-    "no-console": 0
-  }
-}

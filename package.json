@@ -1,20 +1,23 @@
 {
   "name": "snfe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "strip-named-function-expression",
   "main": "build/index.js",
   "bin": {
     "snfe": "build/cli.js"
   },
   "scripts": {
-    "build": "./node_modules/.bin/babel src/index.es6.js -o build/index.js && ./node_modules/.bin/babel src/cli.es6.js -o build/cli.js ",
-    "test": "npm run build && ./node_modules/.bin/mocha --compilers js:babel/register"
+    "clean": "rm -rf build",
+    "prebuild": "npm run clean",
+    "build": "babel src -d build",
+    "pretest": "npm run build",
+    "test": "mocha src/index.test.js"
   },
   "author": "AJ Hsu",
-  "license": "WTFPL",
+  "license": "MIT",
   "devDependencies": {
-    "babel": "^5.8.23",
-    "chai": "^3.2.0",
-    "mocha": "^2.3.2"
+    "babel": "^5.8.38",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }
