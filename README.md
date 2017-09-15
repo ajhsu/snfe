@@ -1,11 +1,12 @@
-# Strip Named Function Expression [![Build Status](https://travis-ci.org/ajhsu/snfe.svg?branch=master)](https://travis-ci.org/ajhsu/snfe)
-Strip named function expression's name, preventing from raising error on Safari's strict mode.
+# Strip Named Function Expression
+
+Strip the function name of a [Named Function Expression](http://kangax.github.io/nfe/#named-expr), prevent from raising error under Safari strict mode.
+
+[![npm](https://img.shields.io/npm/v/snfe.svg)](https://www.npmjs.com/package/snfe)
+[![Build Status](https://travis-ci.org/ajhsu/snfe.svg?branch=master)](https://travis-ci.org/ajhsu/snfe)
 
 ## Usage
 `snfe [input file] > [output file]`
-
-## Reference
-[Named Function Expression](http://kangax.github.io/nfe/#named-expr)
 
 ## LICENSE
 
