@@ -6,3 +6,7 @@ Strip named function expression's name, preventing from raising error on Safari'
 
 ## Reference
 [Named Function Expression](http://kangax.github.io/nfe/#named-expr)
+
+## LICENSE
+
+MIT
